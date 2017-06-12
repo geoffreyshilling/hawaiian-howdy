@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Hawaiian Howdy
-Plugin URI: 	https://wpadventure.com/plugins/hawaiian-howdy
+Plugin URI: 	https://geoffreyshilling.com/plugins/hawaiian-howdy/
 Description: 	Hawaiianizes the "Howdy" message displayed in the top right corner for users when they are logged in, based on time of day.
-Version: 		1.0.0
+Version: 		1.0.2
 Author: 		Geoffrey Shilling
-Author URI: 	https://wpadventure.com
+Author URI: 	https://geoffreyshilling.com/
 License:     	GPL2
 License URI: 	https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: hawaiian-howdy
