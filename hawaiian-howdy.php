@@ -35,7 +35,15 @@ class WPA_Hawaiian_Howdy {
   function hawaiianize_howdy( $wp_admin_bar ) {
     $my_account = $wp_admin_bar->get_node( 'my-account' );
     $message = "";
+    $current_date_time = getdate();
     $current_hour = current_time( 'H' );
+    $current_day = $current_date_time[ 'wday' ];
+    $MESSAGE_MORNING = 'Aloha K&#xe4;kahiaka (Good Morning)';
+    $MESSAGE_DAY = 'Aloha Awakea (Good Day)';
+    $MESSAGE_AFTERNOON = "Aloha 'Auinal&#xe4; (Good Afternoon)";
+    $MESSAGE_EVENING = 'Aloha Ahiahi (Good Evening)';
+
+    $MESSAGE_DEFAULT = 'Aloha';
 
     /* Set the greeting based on time of day
      * Midnight-10:59 am:  Aloha K&#xe4;kahiaka (Good Morning)
@@ -45,20 +53,25 @@ class WPA_Hawaiian_Howdy {
      */
     switch ( $current_hour) {
       case ( ( $current_hour >= 0 ) && ( $current_hour < 11 ) ):
-        $message .= 'Aloha K&#xe4;kahiaka (Good Morning)';
+        $message .= $MESSAGE_MORNING;
         break;
       case (($current_hour >= 11 ) && ($current_hour < 13 ) ):
-        $message .= 'Aloha Awakea (Good Day)';
+        $message .= $MESSAGE_DAY;
         break;
       case ( ( $current_hour >= 13 ) && ($current_hour < 17 ) ):
-        $message .= "Aloha 'Auinal&#xe4; (Good Afternoon)";
+        $message .= $MESSAGE_AFTERNOON;
         break;
       case ( ( $current_hour >= 17 ) && ( $current_hour < 24 ) ):
-        $message .= 'Aloha Ahiahi (Good Evening)';
+        $message .= $MESSAGE_EVENING;
         break;
       default:
-        $message .= 'Aloha';
+        $message .= $MESSAGE_DEFAULT;
         break;
+    }
+
+    switch ( $current_day) {
+      case ( 6 ):
+        $message .= ' and Happy Aloha Friday';
     }
 
     $new_title   = str_replace ( 'Howdy', $message, $my_account->title );
