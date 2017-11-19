@@ -11,6 +11,7 @@ License:     	GPL2
 License URI: 	https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:    hawaiian-howdy
 
+
 Hawaiian Howdy is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
@@ -24,7 +25,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Hawaiian Howdy. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
 */
-
 
 // exit if file is called directly
 if ( ! defined( 'ABSPATH' ) ) {
