@@ -1,0 +1,68 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-20 10:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: admin/admin-menu.php:24
+msgid "Hawaiian Howdy Settings"
+msgstr ""
+
+#. Name of the plugin
+#: admin/admin-menu.php:25
+msgid "Hawaiian Howdy"
+msgstr ""
+
+#: admin/settings-register.php:40
+msgid "Hawaiian Greetings"
+msgstr ""
+
+#: admin/settings-register.php:60
+msgid "Display Hawaiian Greeting"
+msgstr ""
+
+#: admin/settings-register.php:64
+msgid "Display custom greetings based on time of day"
+msgstr ""
+
+#: admin/settings-register.php:69
+msgid "Display Aloha Friday"
+msgstr ""
+
+#: admin/settings-register.php:73
+msgid "Display Aloha Friday on Fridays"
+msgstr ""
+
+#: admin/settings-callbacks.php:10
+msgid ""
+"These settings enable you to customize the Hawaiian greeting that replaces "
+"the \"Howdy\" text."
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Hawaiianizes the \"Howdy\" message displayed in the top right corner for "
+"users when they are logged in, based on time of day."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://geoffreyshilling.com/plugins/hawaiian-howdy"
+msgstr ""
+
+#. Author of the plugin
+msgid "Geoffrey Shilling"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://geoffreyshilling.com"
+msgstr ""

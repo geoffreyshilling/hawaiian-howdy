@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 function gs808hh_add_sublevel_menu() {
 
 	/*
-
 	add_submenu_page(
 		string   $parent_slug,
 		string   $page_title,
@@ -18,13 +17,12 @@ function gs808hh_add_sublevel_menu() {
 		string   $menu_slug,
 		callable $function = ''
 	);
-
 	*/
 
 	add_submenu_page(
 		'options-general.php',
-		'Hawaiian Howdy Settings',
-		'Hawaiian Howdy',
+		esc_html__( 'Hawaiian Howdy Settings', 'hawaiian-howdy' ),
+		esc_html__( 'Hawaiian Howdy', 'hawaiian-howdy' ),
 		'manage_options',
 		'hawaiian-howdy',
 		'gs808hh_display_settings_page'

@@ -31,7 +31,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
 // load text domain
 function gs808hh_load_textdomain() {
 
@@ -46,8 +45,8 @@ if ( is_admin() ) {
 	// include dependencies
 	require_once plugin_dir_path( __FILE__ ) . 'admin/admin-menu.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/core-functions.php';
-	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-page.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-callbacks.php';
+	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-page.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-register.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-validate.php';
 }

@@ -37,7 +37,7 @@ function gs808hh_register_settings() {
 
 	add_settings_section(
 		'gs808hh_section_greetings',
-		esc_html__( 'Hawaiian Greetings' ),
+		esc_html__( 'Hawaiian Greetings', 'hawaiian-howdy' ),
 		'gs808hh_callback_section_greetings',
 		'hawaiian-howdy'
 	);
@@ -57,20 +57,20 @@ add_settings_field(
 
 	add_settings_field(
 		'display_hawaiian_greeting',
-		esc_html__( 'Display Hawaiian Greeting' ),
+		esc_html__( 'Display Hawaiian Greeting', 'hawaiian-howdy' ),
 		'gs808hh_callback_field_checkbox',
 		'hawaiian-howdy',
 		'gs808hh_section_greetings',
-		[ 'id' => 'display_hawaiian_greeting', 'label' => 'Display custom greetings based on time of day' ]
+		[ 'id' => 'display_hawaiian_greeting', 'label' => esc_html__( 'Display custom greetings based on time of day', 'hawaiian-howdy' ) ]
 	);
 
 	add_settings_field(
 		'display_aloha_friday',
-		esc_html__( 'Display Aloha Friday' ),
+		esc_html__( 'Display Aloha Friday', 'hawaiian-howdy' ),
 		'gs808hh_callback_field_checkbox',
 		'hawaiian-howdy',
 		'gs808hh_section_greetings',
-		[ 'id' => esc_html__( 'display_aloha_friday' ), 'label' => esc_html__( 'Display Aloha Friday on Fridays' ) ]
+		[ 'id' => 'display_aloha_friday', 'label' => esc_html__( 'Display Aloha Friday on Fridays', 'hawaiian-howdy' ) ]
 	);
 
 

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function gs808hh_callback_section_greetings() {
 
-	echo '<p>These settings enable you to customize the Hawaiian greeting that replaces the "Howdy" text.</p>';
+	echo '<p>' . esc_html__( 'These settings enable you to customize the Hawaiian greeting that replaces the "Howdy" text.', 'hawaiian-howdy' ) . '</p>';
 }
 
 // callback: checkbox field
