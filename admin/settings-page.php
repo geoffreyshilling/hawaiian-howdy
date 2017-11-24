@@ -1,13 +1,22 @@
-<?php // Hawaiian Howdy - Settings Page
+<?php
+/**
+ * Create the settings page
+ *
+ * @package hawaiian-howdy
+ * @since 1.0.0
+ */
 
-// exit if file is called directly
+// Exit if file is called directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// display the plugin settings page
-// Create a function called "gs808hh_add_sublevel_menu" if it doesn't already exist
 if ( ! function_exists( 'gs808hh_display_settings_page' ) ) {
+	/**
+	 * Create the settings page.
+	 *
+	 * @since 1.0.0
+	 */
 	function gs808hh_display_settings_page() {
 		// check if user is allowed access
 		if ( ! current_user_can( 'manage_options' ) ) {

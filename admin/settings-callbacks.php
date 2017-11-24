@@ -1,12 +1,22 @@
-<?php // Hawaiian Howdy - Settings Callbacks
+<?php
+/**
+ * Callbacks for the settings pages
+ *
+ * @package hawaiian-howdy
+ * @since 1.0.0
+ */
 
-// exit if file is called directly
+// Exit if file is called directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Create a function called "gs808hh_callback_section_greetings" if it doesn't already exist
 if ( ! function_exists( 'gs808hh_callback_section_greetings' ) ) {
+	/**
+	 * Create the greetings section on the settings page.
+	 *
+	 * @since 1.0.0
+	 */
 	function gs808hh_callback_section_greetings() {
 		echo '<p>';
 		esc_html_e( 'These settings enable you to customize the Hawaiian greeting that replaces the "Howdy" text.', 'hawaiian-howdy' );
@@ -14,9 +24,12 @@ if ( ! function_exists( 'gs808hh_callback_section_greetings' ) ) {
 	}
 }
 
-// callback: checkbox field
-// Create a function called "gs808hh_callback_field_checkbox" if it doesn't already exist
 if ( ! function_exists( 'gs808hh_callback_field_checkbox' ) ) {
+	/**
+	 * Create the greetings section on the settings page.
+	 *
+	 * @since 1.0.0
+	 */
 	function gs808hh_callback_field_checkbox( $args ) {
 		$options = get_option( 'gs808hh_options', gs808hh_options_default() );
 

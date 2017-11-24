@@ -3,7 +3,7 @@
 Plugin Name:    Hawaiian Howdy
 Plugin URI: 	https://geoffreyshilling.com/plugins/hawaiian-howdy
 Description: 	Hawaiianizes the "Howdy" message displayed in the top right corner for users when they are logged in, based on time of day.
-Version: 		0.2.0
+Version: 		1.0.0
 Domain Path:    /languages
 Author: 		Geoffrey Shilling
 Author URI: 	https://geoffreyshilling.com
@@ -26,22 +26,24 @@ You should have received a copy of the GNU General Public License
 along with Hawaiian Howdy. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
 */
 
-// exit if file is called directly
+// Exit if file is called directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
-* Loads the plugin language files
-*
-* @since 1.0
-*/
 if ( ! function_exists( 'gs808hh_load_textdomain' ) ) {
+	/**
+	* Loads the plugin language files.
+	*
+	* @since 1.0
+	*/
 	function gs808hh_load_textdomain() {
 		load_plugin_textdomain( 'hawaiian-howdy', false, plugin_dir_path( __FILE__ ) . 'languages/' );
 	}
 	add_action( 'plugins_loaded', 'gs808hh_load_textdomain' );
 }
+
+
 
 // if admin area
 if ( is_admin() ) {
@@ -54,14 +56,14 @@ if ( is_admin() ) {
 	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-validate.php';
 }
 
-/**
- * Set default values for what messages to display.
- *
- * @since  1.0.0
- *
- * @return array The message options
- */
 if ( ! function_exists( 'gs808hh_options_default' ) ) {
+	/**
+	 * Set default values for what messages to display.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @return array The message options
+	 */
 	function gs808hh_options_default() {
 		return array(
 			'display_hawaiian_greeting'	=> true,

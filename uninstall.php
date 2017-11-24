@@ -1,14 +1,20 @@
-<?php // Hawaiian Howdy - Uninstall
+<?php
+/**
+ * Create plugin uninstall
+ *
+ * @package hawaiian-howdy
+ * @since 1.0.0
+ */
 
-// exit if file is called directly
+// Exit if file is called directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// exit if uninstall constant is not defined
+// Exit if uninstall constant is not defined.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
-// delete the plugin options
+// Delete the plugin options.
 delete_option( 'gs808hh_options' );

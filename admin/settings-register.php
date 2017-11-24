@@ -1,13 +1,22 @@
-<?php // Hawaiian Howdy - Settings Register
+<?php
+/**
+ * Register plugin settings
+ *
+ * @package hawaiian-howdy
+ * @since 1.0.0
+ */
 
-// exit if file is called directly
+// Exit if file is called directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// register plugin settings
-// Create a function called "gs808hh_register_settings" if it doesn't already exist
 if ( ! function_exists( 'gs808hh_register_settings' ) ) {
+	/**
+	 * Register Hawaiian Howdy settings.
+	 *
+	 * @since 1.0.0
+	 */
 	function gs808hh_register_settings() {
 		/**
 		 * register_setting(

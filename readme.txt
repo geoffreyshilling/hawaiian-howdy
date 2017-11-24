@@ -3,13 +3,13 @@ Plugin Name: Hawaiian Howdy
 Description: Track workouts to improve my Navy Reserve PRT score.
 Plugin URI:  https://geoffreyshilling.com/plugins/hawaiian-howdy
 Author:      Geoffrey Shilling
-Version:     0.2.0
+Version:     1.0.0
 Text Domain:  hawaiian-howdy
 Domain Path:  /languages
 License:     GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+ Hawaiianizes the "Howdy" message displayed in the top right corner for users when they are logged in, based on time of day.
 
 == Description ==
 
@@ -49,17 +49,6 @@ e.g.
 1. Use the Settings->Plugin Name screen to configure the plugin
 1. (Make your instructions match the desired user flow for activating and installing your plugin. Include any steps that might be needed for explanatory purposes)
 
-
-== Frequently Asked Questions ==
-
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
-
 == Screenshots ==
 
 1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
@@ -71,19 +60,12 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+* Initial release.
 
 == Upgrade Notice ==
 
 = 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
+Initial release.
 
 == Arbitrary section ==
 

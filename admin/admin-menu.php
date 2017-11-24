@@ -1,13 +1,23 @@
-<?php // Hawaiian Howdy - Admin Menu
+<?php
+/**
+ * Settings admin menu
+ *
+ * @package hawaiian-howdy
+ * @since 1.0.0
+ */
 
-// exit if file is called directly
+// Exit if file is called directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Create a function called "gs808hh_add_sublevel_menu" if it doesn't already exist
 if ( ! function_exists( 'gs808hh_add_sublevel_menu' ) ) {
-	// add sub-level administrative menu
+	/**
+	 * Add sub-level administrative menu.
+	 *
+	 * @since  1.0.0
+	 *
+	 */
 	function gs808hh_add_sublevel_menu() {
 		/*
 		add_submenu_page(

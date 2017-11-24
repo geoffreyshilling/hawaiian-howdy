@@ -1,16 +1,26 @@
-<?php // Hawaiian Howdy - Settings Validate
+<?php
+/**
+ * Validate settings input
+ *
+ * @package hawaiian-howdy
+ * @since 1.0.0
+ */
 
-// exit if file is called directly
+// Exit if file is called directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// validate plugin settings
-// Create a function called "gs808hh_validate_options" if it doesn't already exist
 if ( ! function_exists( 'gs808hh_validate_options' ) ) {
+	/**
+	 * Validate settings options.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array  $input An array of options to validate.
+	 * @return array An array of validated options.
+	 */
 	function gs808hh_validate_options( $input ) {
-
-		
 		// display custom time-based greetings
 		if ( ! isset( $input['display_hawaiian_greeting'] ) ) {
 			$input['display_hawaiian_greeting'] = null;
