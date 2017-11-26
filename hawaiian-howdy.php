@@ -31,17 +31,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// load text domain
-function gs808hh_load_textdomain() {
-
-	load_plugin_textdomain( 'hawaiian-howdy', false, plugin_dir_path( __FILE__ ) . 'languages/' );
-
+/**
+* Loads the plugin language files
+*
+* @since 1.0
+*/
+if ( ! function_exists( 'gs808hh_load_textdomain' ) ) {
+	function gs808hh_load_textdomain() {
+		load_plugin_textdomain( 'hawaiian-howdy', false, plugin_dir_path( __FILE__ ) . 'languages/' );
+	}
+	add_action( 'plugins_loaded', 'gs808hh_load_textdomain' );
 }
-add_action( 'plugins_loaded', 'gs808hh_load_textdomain' );
 
 // if admin area
 if ( is_admin() ) {
-
 	// include dependencies
 	require_once plugin_dir_path( __FILE__ ) . 'admin/admin-menu.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/core-functions.php';
@@ -51,12 +54,18 @@ if ( is_admin() ) {
 	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-validate.php';
 }
 
-// default plugin options
-function gs808hh_options_default() {
-
-	return array(
-		'display_hawaiian_greeting'     => true,
-		'display_aloha_friday'   		=> true,
-	);
-
+/**
+ * Set default values for what messages to display.
+ *
+ * @since  1.0.0
+ *
+ * @return array The message options
+ */
+if ( ! function_exists( 'gs808hh_options_default' ) ) {
+	function gs808hh_options_default() {
+		return array(
+			'display_hawaiian_greeting'	=> true,
+			'display_aloha_friday'   	=> true,
+		);
+	}
 }
