@@ -2,7 +2,7 @@
 /*
 Plugin Name:    Hawaiian Howdy
 Plugin URI: 	https://geoffreyshilling.com/plugins/hawaiian-howdy
-Description: 	Hawaiianizes the "Howdy" message displayed in the top right corner for users when they are logged in, based on time of day.
+Description: 	Easily change the "Howdy" message to a Hawaiian greeting based on the time of day and/or day of week.
 Version: 		1.0.0
 Domain Path:    /languages
 Author: 		Geoffrey Shilling
@@ -29,6 +29,76 @@ along with Hawaiian Howdy. If not, see https://www.gnu.org/licenses/gpl-2.0.html
 // Exit if file is called directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
+
+if ( ! defined( 'GS808HH_FRIDAY' ) ) {
+	/**
+	 * Message text when it's afternoon.
+	 *
+	 * @since 1.0
+	 * @var   string
+	 */
+	define( 'GS808HH_FRIDAY', 'Friday' );
+}
+
+if ( ! defined( 'GS808HH_MESSAGE_MORNING' ) ) {
+	/**
+	 * Message text when it's morning.
+	 *
+	 * @since 1.0
+	 * @var   string
+	 */
+	define( 'GS808HH_MESSAGE_MORNING', 'Aloha K&#xe4;kahiaka (Good Morning)' );
+}
+
+if ( ! defined( 'GS808HH_MESSAGE_DAY' ) ) {
+	/**
+	 * Message text when it's mid-day.
+	 *
+	 * @since 1.0
+	 * @var   string
+	 */
+	define( 'GS808HH_MESSAGE_DAY', 'Aloha Awakea (Good Day)' );
+}
+
+if ( ! defined( 'GS808HH_MESSAGE_AFTERNOON' ) ) {
+	/**
+	 * Message text when it's afternoon.
+	 *
+	 * @since 1.0
+	 * @var   string
+	 */
+	define( 'GS808HH_MESSAGE_AFTERNOON', "Aloha 'Auinal&#xe4; (Good Afternoon)" );
+}
+
+if ( ! defined( 'GS808HH_MESSAGE_EVENING' ) ) {
+	/**
+	 * Message text when it's evening.
+	 *
+	 * @since 1.0
+	 * @var   string
+	 */
+	define( 'GS808HH_MESSAGE_EVENING', 'Aloha Ahiahi (Good Evening)' );
+}
+
+if ( ! defined( 'GS808HH_MESSAGE_DEFAULT' ) ) {
+	/**
+	 * Default message text.
+	 *
+	 * @since 1.0
+	 * @var   string
+	 */
+	define( 'GS808HH_MESSAGE_DEFAULT', 'Aloha' );
+}
+
+if ( ! defined( 'GS808HH_MESSAGE_ALOHA_FRIDAY' ) ) {
+	/**
+	 * Message text when it's Friday.
+	 *
+	 * @since 1.0
+	 * @var   string
+	 */
+	define( 'GS808HH_MESSAGE_ALOHA_FRIDAY', 'Happy Aloha Friday ' );
 }
 
 if ( ! function_exists( 'gs808hh_load_textdomain' ) ) {

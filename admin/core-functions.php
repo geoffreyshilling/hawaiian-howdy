@@ -22,82 +22,15 @@ if ( ! function_exists( 'gs808hh_make_hawaiian_howdy' ) ) {
 	*/
 	function gs808hh_make_hawaiian_howdy( $wp_admin_bar ) {
 	    $message = '';
-	    $current_date_time = getdate();
+	    //$current_date_time = getdate();
+	    $current_date_time = current_time( 'mysql' );
+		$testtime = current_time( 'mysql' );
 	    $current_hour = current_time( 'H' );
-	    $current_day = $current_date_time['wday'];
-
+	    //$current_day = $current_date_time['wday'];
+		$current_day = date( 'l', current_time( 'timestamp', 0 ) );
+		
 		$options = get_option( 'gs808hh_options', gs808hh_options_default() );
 
-		if ( ! defined( 'GS808HH_FRIDAY' ) ) {
-			/**
-			 * Message text when it's afternoon.
-			 *
-			 * @since 1.0
-			 * @var   string
-			 */
-			define( 'GS808HH_FRIDAY', 5 );
-		}
-
-		if ( ! defined( 'GS808HH_MESSAGE_MORNING' ) ) {
-			/**
-			 * Message text when it's morning.
-			 *
-			 * @since 1.0
-			 * @var   string
-			 */
-			define( 'GS808HH_MESSAGE_MORNING', 'Aloha K&#xe4;kahiaka (Good Morning)' );
-		}
-
-		if ( ! defined( 'GS808HH_MESSAGE_DAY' ) ) {
-			/**
-			 * Message text when it's mid-day.
-			 *
-			 * @since 1.0
-			 * @var   string
-			 */
-			define( 'GS808HH_MESSAGE_DAY', 'Aloha Awakea (Good Day)' );
-		}
-
-		if ( ! defined( 'GS808HH_MESSAGE_AFTERNOON' ) ) {
-			/**
-			 * Message text when it's afternoon.
-			 *
-			 * @since 1.0
-			 * @var   string
-			 */
-			define( 'GS808HH_MESSAGE_AFTERNOON', "Aloha 'Auinal&#xe4; (Good Afternoon)" );
-		}
-
-		if ( ! defined( 'GS808HH_MESSAGE_EVENING' ) ) {
-			/**
-			 * Message text when it's evening.
-			 *
-			 * @since 1.0
-			 * @var   string
-			 */
-			define( 'GS808HH_MESSAGE_EVENING', 'Aloha Ahiahi (Good Evening)' );
-		}
-
-		if ( ! defined( 'GS808HH_MESSAGE_DEFAULT' ) ) {
-			/**
-			 * Default message text.
-			 *
-			 * @since 1.0
-			 * @var   string
-			 */
-			define( 'GS808HH_MESSAGE_DEFAULT', 'Aloha' );
-		}
-
-		if ( ! defined( 'GS808HH_MESSAGE_ALOHA_FRIDAY' ) ) {
-			/**
-			 * Message text when it's Friday.
-			 *
-			 * @since 1.0
-			 * @var   string
-			 */
-			define( 'GS808HH_MESSAGE_ALOHA_FRIDAY', 'Happy Aloha Friday' );
-		}
-		
 	    $display_hawaiian_greeting = isset( $options['display_hawaiian_greeting'] ) && ! empty( $options['display_hawaiian_greeting'] );
 
 		$display_aloha_friday = isset( $options['display_aloha_friday'] ) && ! empty( $options['display_aloha_friday'] );
@@ -105,28 +38,11 @@ if ( ! function_exists( 'gs808hh_make_hawaiian_howdy' ) ) {
 	    $my_account_node = $wp_admin_bar->get_node( 'my-account' );
 
 	    if ( $display_hawaiian_greeting && $display_aloha_friday ) {
-			switch ( $current_hour ) {
-	case ( ( $current_hour >= 0 ) && ( $current_hour < 11 ) ):
-		$message .= GS808HH_MESSAGE_MORNING;
-		break;
-	case ( ( $current_hour >= 11 ) && ( $current_hour < 13 ) ):
-		$message .= GS808HH_MESSAGE_DAY;
-		break;
-	case ( ( $current_hour >= 13 ) && ( $current_hour < 17 ) ):
-		$message .= GS808HH_MESSAGE_AFTERNOON;
-		break;
-	case ( ( $current_hour >= 17 ) && ( $current_hour < 24 ) ):
-		$message .= GS808HH_MESSAGE_EVENING;
-		break;
-	default:
-		$message .= GS808HH_MESSAGE_DEFAULT;
-		break;
-}
-        }
+			$message = gs808hh_get_hawaiian_message ( $current_hour );
 
-        // If today is Friday
-        if ( GS808HH_FRIDAY === $current_day ) {
-            $message .= ' and ' . GS808HH_MESSAGE_ALOHA_FRIDAY;
+			if ( GS808HH_FRIDAY === $current_day ) {
+	            $message .= ' and ' . GS808HH_MESSAGE_ALOHA_FRIDAY;
+			}
         } elseif ( $display_hawaiian_greeting ) {
 			$message = gs808hh_get_hawaiian_message ( $current_hour );
 		} elseif ( $display_aloha_friday ) {
